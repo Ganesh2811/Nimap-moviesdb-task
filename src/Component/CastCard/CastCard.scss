@@ -1,0 +1,50 @@
+.casrHeader{
+    color: #fff;
+    font-weight: 700;
+}
+.castWrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    .itemWrapper{
+        .castProfileImage{
+            width: 225px;
+            height: 300px;
+        }
+        .textWrapper{
+            text-align: start;
+            .castTitle{
+                color: #fff;
+                font-weight: 700; 
+            }
+            .castCharacter{
+                color: #fff;
+                font-weight: 700;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 375px) {
+    .castWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: unset;
+        .itemWrapper{
+            .textWrapper{
+                padding: 8px 0;
+                .castTitle{
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+                .castCharacter{
+                    width: 200px;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

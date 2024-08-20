@@ -1,0 +1,138 @@
+.moviedescriptionContainer {
+    display: flex;
+    gap: 20px;
+    
+    .leftSection {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+      gap: 15px;
+      padding: 16px;
+  
+      .upperSection {
+        display: flex;
+        gap: 20px;
+  
+        .movieDescImage {
+          width: 200px;
+          height: 275px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+  
+        .movieDescData {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+  
+          .movieTitle{
+            font-size: 24px;
+            color: #fff;
+          }
+          .movierating{
+            font-size: 14px;
+            color: gray;
+          }
+          .movieTimeDetails {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+  
+            .time {
+                font-size: 12px;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                padding: 4px;
+                color: #fff;
+            }
+  
+            .genersActionWrapper {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .gernerActionText{
+                color: #fff;
+                font-size: 16px;
+                font-weight: 400;
+                margin-right: 5px;
+              }
+            }
+          }
+          .movieReleasingData{
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+  
+      .lowerSection {
+        h3 {
+          margin-bottom: 10px;
+          color: #fff;
+        }
+  
+        .overviewDescription {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #fff;
+        }
+      }
+    }
+  
+    .rightSection {
+      display: flex;
+      flex-basis: 50%;
+      justify-content: center;
+      align-items: center;
+  
+      .movieDescImage {
+        width: 585px;
+        height: 370px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 375px) {
+    .moviedescriptionContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  
+      .leftSection {
+        width: 100%;
+  
+        .upperSection {
+          flex-direction: column;
+          align-items: center;
+  
+          .movieDescImage {
+            width: 100%;
+            height: auto;
+          }
+  
+          .movieDescData {
+            align-items: center;
+            text-align: center;
+  
+            .movieTimeDetails {
+              justify-content: center;
+            }
+          }
+        }
+  
+        .lowerSection {
+          text-align: center;
+  
+          .overviewDescription {
+            font-size: 0.9rem;
+          }
+        }
+      }
+  
+      .rightSection {
+        display: none; /* Hide the right section in mobile view */
+      }
+    }
+  }
+  
