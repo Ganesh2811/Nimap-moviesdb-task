@@ -36,6 +36,11 @@
     padding: 8px 8px;
 }
 @media only screen and (max-width: 428px) {
+    .title{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+    }
     .cardWrapper {
         display: flex;
         flex-direction: column;
