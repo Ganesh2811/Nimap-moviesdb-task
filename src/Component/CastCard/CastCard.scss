@@ -26,6 +26,11 @@
     }
 }
 @media only screen and (max-width: 428px) {
+    .casrHeader{
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
     .castWrapper {
         display: flex;
         flex-direction: column;
