@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchPopularMovies, fetchTopRatedMovies, fetchUpcomingMovies,fetchSearchResults  } from '../Redux/moviesSlice';
 import Pagination from '../Component/Pagination/Pagination';
 
-const HomePage = ({title,category}) => {
+const HomePage = ({title, category}) => {
   const dispatch = useDispatch();
   const [isSearching, setIsSearching] = useState(false);
   const searchQuery = useSelector((state) => state.movies.searchQuery);
   const searchResults = useSelector((state) => state.movies.searchResults);
+
   const movies = useSelector((state)=>{
     switch (category) {
       case 'popular':
@@ -21,6 +22,8 @@ const HomePage = ({title,category}) => {
         return [];
     }
   })
+
+
   useEffect(() => {
     if (searchQuery) {
       setIsSearching(true);
@@ -36,6 +39,7 @@ const HomePage = ({title,category}) => {
       }
     }
   }, [category, searchQuery, dispatch]);
+
   const dataToDisplay  = isSearching ? searchResults : movies;
   
   return (
