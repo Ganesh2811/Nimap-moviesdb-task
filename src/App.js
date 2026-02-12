@@ -5,6 +5,7 @@ import HomePage from './Page/HomePage';
 import TopRatedPage from './Page/TopRatedPage';
 import UpcomingPage from './Page/UpcomingPage';
 import SingleMoviePage from './Page/SingleMoviePage';
+import Demo from './Page/DemoPage';
 import { Provider } from 'react-redux';
 import { store } from './Redux/store';
 
@@ -16,6 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage title="Popular Movies" category={"popular"} /> } />
+          <Route path="/demo" element={<Demo title={"demo"} /> } />
           <Route path="/top-rated" element={<TopRatedPage title="Top Rated Movies" category={"top-rated"}/>} />
           <Route path="/upcoming" element={<UpcomingPage title="Upcoming Movies" category={"upcoming"}/>} />
           <Route path="/MovieDetailsPage/:id" element={<SingleMoviePage title="Cast"/> } />
