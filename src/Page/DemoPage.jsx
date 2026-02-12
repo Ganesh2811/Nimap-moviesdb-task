@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 
 // Initial State
+// useReducer is a React Hook used for managing complex state logic.
 const initialScore = [
     {
         id: 1,
@@ -16,16 +17,22 @@ const initialScore = [
 
 // Reducer Function
 const reducer = (state, action) => {
+    console.log(state, "state before update !!");
+    console.log(action, "action !!");
+    let newState;
     switch (action.type) {
         case "INCREASE":
-            return state.map((player) =>
+            newState =  state.map((player) =>
                 player.id === action.id
                     ? { ...player, score: player.score + 1 }
                     : player
             );
+            break;
         default:
-            return state;
+            return newState = state;
     }
+    console.log(newState, "state after update !!");
+    return newState;
 };
 
 const DemoPage = () => {
